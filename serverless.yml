@@ -1,0 +1,17 @@
+service: serverless-slack
+
+provider:
+  name: aws
+  timeout: 100
+  runtime: python3.6
+  environment:
+    SLACK_TOKEN_PARAMNAME: parameter_name_where_slack_token_is_store
+
+plugins:
+  - serverless-python-requirements
+functions:
+   cloudwatch-alerts-notifications:
+     handler: cloudwatch.sns_alert_to_slack
+     events:
+       - sns: cloudwatch-alerts-sns
+      
