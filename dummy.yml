@@ -1,0 +1,6 @@
+service: serverless-slack
+
+provider:
+  name: aws
+  timeout: 100
+  runtime: python3.6
