@@ -2,7 +2,10 @@
 
 Cloudwatch alerts on slack.
 
+Usually glueing Cloudwatch alerts to Slack requires a Lambda function, requires you to know how to parse the SNS, and specify a channel.
+
 This projects creates a lambda function that knows how to send cloudwatch-alert-SNSs to Slack.
+You can use this project to handle alerts for multiple projects.
 
 
 ## Usage
